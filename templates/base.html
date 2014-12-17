@@ -29,38 +29,10 @@
   <body>
     <header class="banner">
       <pre class="banner reg-banner">
-            OOOO
-           O::::O
-            OOOO
-
-          OOOOOOO  OOOOOOOOOOOOO  OOOOO   OOOOOOOOOOOOOOOO           OOOOOOO
-          O:::::O  O::::::::::::O O::::OOO:::::::::OO:::::O         O:::::O
-           O::::O  OOOOOOOOO:::::OO:::::::::::::::::OO:::::O       O:::::O
-           O::::O           O::::OOO::::::OOOOO::::::OO:::::O     O:::::O
-           O::::O    OOOOOOO:::::O O:::::O     O:::::O O:::::O   O:::::O
-           O::::O  OO::::::::::::O O:::::O     OOOOOOO  O:::::O O:::::O
-           O::::O O::::OOOO::::::O O:::::O               O:::::O:::::O
-           O::::OO::::O    O:::::O O:::::O                O:::::::::O
-           O::::OO::::O    O:::::O O:::::O                 O:::::::O
-           O::::OO:::::OOOO::::::O O:::::O                  O:::::O
-           O::::O O::::::::::OO:::OO:::::O                   O:::O
-           O::::O  OOOOOOOOOO  OOOOOOOOOOO                    OOO
-           O::::O
- OOOO      O::::O
-O::::OO   O:::::O
-O::::::OOO::::::O
- OO::::::::::::O
-   OOO::::::OOO
-      OOOOOO
+{{ ASCII_BANNER|default("<strong><span style='color: red'>You must set ASCII_BANNER in pelicanconf.py</span></strong>") }}
       </pre> 
       <pre class="banner mobile-banner">
-       __       ___      .______     ____    ____
-      |  |     /   \     |   _  \    \   \  /   /
-      |  |    /  ^  \    |  |_)  |    \   \/   /
-.--.  |  |   /  /_\  \   |      /      \      /
-|  `--'  |  /  _____  \  |  |\  \----.  \    /
- \______/  /__/     \__\ | _| `._____|   \__/
-
+{{ ASCII_BANNER_MOBILE|default(ASCII_BANNER) }}
       </pre>
       {% include 'social_navigation.html' %}
       <div class="navigation">
@@ -83,7 +55,7 @@ O::::::OOO::::::O
         {% endif %}
       </div>
       <div>
-        powered by <a href="http://getpelican.com/">pelican</a>.
+        powered by <a href="http://getpelican.com/">pelican</a> with the <a href="https://github.com/jarv/jarvican">jarvican</a> theme.
       </div>
     </footer><!-- /#contentinfo -->
 
