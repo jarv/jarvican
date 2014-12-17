@@ -1,0 +1,201 @@
+@import 'bourbon/bourbon'
+
+// color definitions
+$dark-red: #77141c
+$orange-red: #E48743
+$yellow-orange: #EDC571
+$yellow: #FDD56C
+$light-blue: #81C6DD
+$dark-blue: #27709b
+$mantis: #90CA77
+$gray: #A9A9A9
+$shade-gray: #939393
+$light-gray: #f4f4f4
+$teal: #00ab88
+$dark-charcol: #0d1117
+$charcol: #161e27
+$default-box-shadow: 0 0 0 1px #d1d1d1,0 0 4px 1px #ccc
+
+h2
+  font-family: $helvetica
+  color: $dark-red
+
+a            
+  color: $dark-blue
+  text-decoration: none
+
+a:hover      
+  color: $dark-red
+
+
+ol
+  margin: 0px
+  padding: 0px
+  ul.posts, li.posts
+    list-style-type: none
+  ul, li
+    list-style-type: disc
+
+body
+  background-color: $light-gray
+
+  // **************************   START HEADER
+  header.banner
+    position: relative
+    margin: 0px auto
+    pre.banner      
+      font-family: 'Courier New', Monospace
+      white-space: pre
+      color: $shade-gray
+    pre.mobile-banner
+      display: block
+      width: 470px
+      margin: 0px auto
+    @media all and (min-device-width: 900px)
+      width: 750px
+      pre.mobile-banner
+        display: none
+    @media all and (max-device-width: 900px)
+      width: 100%
+      pre.reg-banner
+        display: none
+    // ** start social
+    div.social-navigation
+      @media all and (min-device-width: 900px)
+
+        display: inline
+        position: absolute
+        right: 25px 
+        top: 0px
+        ol
+          display: inline-block
+        a
+          font-size: 4em
+      @media all and (max-device-width: 900px)
+        background-color: darken($light-gray, 5%)
+        display: block
+        ol
+          display: block
+        a
+          font-size: 6em
+
+      a
+        padding: 0px
+      padding-top: 0
+      text-align: center
+
+      li
+        display: inline
+        padding: 0
+
+
+    // ** start nav links 
+    div.navigation
+
+      @media all and (min-device-width: 900px)
+        position: absolute
+        display: inline-block
+        ol
+          display: inline
+        text-align: right
+        right: 120px
+        top: 320px
+        a
+          font-size: 2em
+      @media all and (max-device-width: 900px)
+        display: block
+        ol
+          display: block
+        width: 100%
+        padding: 10px
+        text-align: center
+        a
+          font-size: 3em
+      a
+        font-family: $helvetica
+        color: $dark-blue
+      a:hover      
+        color: $dark-red
+  // ******************************** END HEADER
+
+  div.content
+    margin: 20px
+  // ************* Code highlights
+  div.highlight
+    padding: 15px
+    background-color: $light-gray
+    font-size: .8em
+
+  // ************* summary article view
+  article.archive
+    padding: 20px
+    box-shadow: $default-box-shadow
+    background-color: white
+    margin-bottom: 10px
+
+    h2
+      font-size: 2.5em
+
+    div.entry-summary
+      font-size: 1.5em
+
+    // timestamp for article
+    footer.post-info abbr
+      padding-bottom: 10px
+      font-size: 1.5em
+      color: #555
+      font-style: italic
+
+
+
+  // ************* single article view
+  section#content
+    padding: 30px
+    box-shadow: $default-box-shadow
+    font-size: 2em
+    background-color: white
+
+    div.entry-content
+      font-size: .8em
+
+    // timestamp for article
+    footer.post-info abbr
+      padding-bottom: 10px
+      font-size: .8em
+      color: #555
+      font-style: italic
+
+
+  // about and archives div wrapper
+  div.page-wrapper, div.archives-wrapper
+    padding: 30px
+    box-shadow: $default-box-shadow
+    font-size: 1.5em
+    background-color: white
+
+  div.archives-wrapper
+    table.archives
+      font-family: $helvetica
+      font-size: 1em
+      width: 100%
+      td
+        padding: 5px 
+      td.even
+        background-color: $light-gray
+      td.date
+        font-family: Fixed, monospace
+        width: 100px
+      td.odd
+        background-color: darken($light-gray, 5%)
+
+
+  // ************* Footer
+  footer#page-footer
+    font-size: 1.5em
+    text-align: center
+    width: 100% 
+    margin-top: 20px
+    margin-bottom: 20px
+
+
+

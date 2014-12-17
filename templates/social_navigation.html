@@ -1,0 +1,16 @@
+{% block social_navigation %}
+<div class="social-navigation">
+  <ol class="nav">
+    {% for name, link in SOCIAL %}
+    <li><a href="{{ link }}"><i class="icon-{{ name }}"></i>  </a></li>
+    {% endfor %}
+    {% if FEED_RSS %}
+    <li><a href="{{ SITEURL }}/{{ FEED_RSS }}"><i class="icon-rss"></i>  </a></li>
+    {% endif %}
+    {% if EMAIL%}
+    <li><a href="mailto:{{ EMAIL }}"><i class="icon-envelope"></i> </a></li>
+    {% endif %}
+  </ol>
+</div>
+{% endblock social_navigation %}
+
