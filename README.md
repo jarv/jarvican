@@ -1,8 +1,7 @@
 # Jarvican
 
-A theme for http://www.jarv.org optimized for bloggers who want
-a very simple theme that is optimized for in-frequent updates
-just like my site!
+A theme for http://www.jarv.org made for bloggers who want
+a simple design that is optimized for infrequent updates.
 
 # License
 
