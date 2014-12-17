@@ -1,6 +1,6 @@
 # Jarvican
 
-A theme for jarv.org optimized for bloggers who want
+A theme for http://www.jarv.org optimized for bloggers who want
 a very simple theme that is optimized for in-frequent updates
 just like my site!
 
