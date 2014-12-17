@@ -6,4 +6,4 @@ just like my site!
 
 # License
 
-This theme is under the `3 clause BSD license <http://opensource.org/licenses/bsd-3-clause>`_
+This theme is under the [http://opensource.org/licenses/bsd-3-clause](3-clause BSD license)
