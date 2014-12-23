@@ -16,8 +16,38 @@ $dark-charcol: #0d1117
 $charcol: #161e27
 $default-box-shadow: 0 0 0 1px #d1d1d1,0 0 4px 1px #ccc
 
+h1, h2, h3, h4, h5, h6
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif
+  line-height: 1.25
+  margin: 0
+  text-rendering: optimizeLegibility
+
+h1
+  font-size: 2.25em
+
 h2
-  font-family: $helvetica
+  font-size: 2em
+
+h3
+  font-size: 1.5em
+
+h4
+  font-size: 1.5em
+
+h5
+  font-size: 1.5em
+
+h2.archive-entry-title
+  a
+    font-size: 2em
+body
+  -webkit-font-smoothing: antialiased
+  background-color: white
+  color: #333333
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif
+  font-size: 1em
+
+h2
   color: $dark-red
 
 a            
@@ -25,7 +55,7 @@ a
   text-decoration: none
 
 a:hover      
-  color: $dark-red
+  color: darken($dark-blue, 10)
 
 
 ol
@@ -43,22 +73,45 @@ body
   header.banner
     position: relative
     margin: 0px auto
-    pre.banner      
-      font-family: 'Courier New', Monospace
-      white-space: pre
-      color: $shade-gray
-    pre.mobile-banner
-      display: block
-      width: 470px
-      margin: 0px auto
+
     @media all and (min-device-width: 900px)
-      width: 750px
       pre.mobile-banner
         display: none
+      width: 810px
+
     @media all and (max-device-width: 900px)
-      width: 100%
       pre.reg-banner
         display: none
+      div.canvas-wrapper
+        display: none
+      width: 100%
+
+
+    div.canvas-wrapper
+      padding-top: 15px
+      display: none
+      #canvas
+        font-family: 'Courier New' monospace
+        z-index: 300
+        margin: 0
+        padding: 0
+    pre.banner      
+      line-height: 16px
+      font-size: 16px
+      font-family: 'Courier New' monospace
+      color: $shade-gray
+      z-index: -300
+    pre.reg-banner
+      padding-top: 20px
+      padding-left: 50px
+      margin-bottom: 50px
+    pre.mobile-banner
+      margin: 0px auto
+      width: 500px
+      z-index: -300
+
+
+
     // ** start social
     div.social-navigation
       @media all and (min-device-width: 900px)
@@ -115,7 +168,7 @@ body
         font-family: $helvetica
         color: $dark-blue
       a:hover      
-        color: $dark-red
+        color: darken($dark-blue, 20)
   // ******************************** END HEADER
 
   div.content
@@ -132,9 +185,6 @@ body
     box-shadow: $default-box-shadow
     background-color: white
     margin-bottom: 10px
-
-    h2
-      font-size: 2.5em
 
     div.entry-summary
       font-size: 1.5em
@@ -196,6 +246,3 @@ body
     width: 100% 
     margin-top: 20px
     margin-bottom: 20px
-
-
-

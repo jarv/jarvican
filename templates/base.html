@@ -4,11 +4,11 @@
     {% block head %}
 
     <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
-    <meta name="viewport" content="width=device-width, target-densitydpi=device-dpi, initial-scale=0, maximum-scale=1, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=0, maximum-scale=1, user-scalable=yes">
     <!-- CSS -->
-    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/{{ CSS_FILE }}" type="text/css" />
-    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/font-awesome.css" type="text/css" />
+    <link rel="stylesheet" href="/theme/css/{{ CSS_FILE }}" type="text/css" />
+    <link rel="stylesheet" href="/theme/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="/theme/css/font-awesome.css" type="text/css" />
     {% if FEED_RSS %}
     <link href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
     {% endif %}
@@ -28,9 +28,10 @@
 
   <body>
     <header class="banner">
+      <div class="canvas-wrapper"><canvas id="canvas"></canvas></div>
       <pre class="banner reg-banner">
 {{ ASCII_BANNER|default("<strong><span style='color: red'>You must set ASCII_BANNER in pelicanconf.py</span></strong>") }}
-      </pre> 
+</pre>
       <pre class="banner mobile-banner">
 {{ ASCII_BANNER_MOBILE|default(ASCII_BANNER) }}
       </pre>
@@ -59,5 +60,8 @@
       </div>
     </footer><!-- /#contentinfo -->
 
+    <script src="/theme/js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="/theme/js/vendor/jquery-1.11.0.min.js"></script>
+    <script src="/theme/js/jarvican.js"></script>
   </body>
 </html>

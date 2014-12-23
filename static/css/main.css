@@ -1,5 +1,35 @@
-h2 {
+h1, h2, h3, h4, h5, h6 {
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  line-height: 1.25;
+  margin: 0;
+  text-rendering: optimizeLegibility; }
+
+h1 {
+  font-size: 2.25em; }
+
+h2 {
+  font-size: 2em; }
+
+h3 {
+  font-size: 1.5em; }
+
+h4 {
+  font-size: 1.5em; }
+
+h5 {
+  font-size: 1.5em; }
+
+h2.archive-entry-title a {
+  font-size: 2em; }
+
+body {
+  -webkit-font-smoothing: antialiased;
+  background-color: white;
+  color: #333333;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1em; }
+
+h2 {
   color: #77141c; }
 
 a {
@@ -7,7 +37,7 @@ a {
   text-decoration: none; }
 
 a:hover {
-  color: #77141c; }
+  color: #1d5372; }
 
 ol {
   margin: 0px;
@@ -22,24 +52,40 @@ body {
   body header.banner {
     position: relative;
     margin: 0px auto; }
-    body header.banner pre.banner {
-      font-family: "Courier New", Monospace;
-      white-space: pre;
-      color: #939393; }
-    body header.banner pre.mobile-banner {
-      display: block;
-      width: 470px;
-      margin: 0px auto; }
     @media all and (min-device-width: 900px) {
       body header.banner {
-        width: 750px; }
+        width: 810px; }
         body header.banner pre.mobile-banner {
           display: none; } }
     @media all and (max-device-width: 900px) {
       body header.banner {
         width: 100%; }
         body header.banner pre.reg-banner {
+          display: none; }
+        body header.banner div.canvas-wrapper {
           display: none; } }
+    body header.banner div.canvas-wrapper {
+      padding-top: 15px;
+      display: none; }
+      body header.banner div.canvas-wrapper #canvas {
+        font-family: "Courier New" monospace;
+        z-index: 300;
+        margin: 0;
+        padding: 0; }
+    body header.banner pre.banner {
+      line-height: 16px;
+      font-size: 16px;
+      font-family: "Courier New" monospace;
+      color: #939393;
+      z-index: -300; }
+    body header.banner pre.reg-banner {
+      padding-top: 20px;
+      padding-left: 50px;
+      margin-bottom: 50px; }
+    body header.banner pre.mobile-banner {
+      margin: 0px auto;
+      width: 500px;
+      z-index: -300; }
     body header.banner div.social-navigation {
       padding-top: 0;
       text-align: center; }
@@ -91,7 +137,7 @@ body {
       font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
       color: #27709b; }
     body header.banner div.navigation a:hover {
-      color: #77141c; }
+      color: #12354a; }
   body div.content {
     margin: 20px; }
   body div.highlight {
@@ -103,8 +149,6 @@ body {
     box-shadow: 0 0 0 1px #d1d1d1, 0 0 4px 1px #cccccc;
     background-color: white;
     margin-bottom: 10px; }
-    body article.archive h2 {
-      font-size: 2.5em; }
     body article.archive div.entry-summary {
       font-size: 1.5em; }
     body article.archive footer.post-info abbr {
