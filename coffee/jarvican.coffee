@@ -2,14 +2,6 @@ $(() ->
 
   ctx = $("#canvas")[0].getContext("2d")
 
-  # Game states
-  #  - running
-  #  - paused
-  #  - spash
-  #  - over
-
-  # Mouse click events
-
   $("#canvas").click((e) ->
     switch game.state
       when "running"
@@ -17,14 +9,14 @@ $(() ->
     return
   )
 
-  $("pre.reg-banner").click((e) ->
+  $(".img-wrapper").click((e) ->
     switch game.state
       when "hidden"
-        $("pre.reg-banner").hide()
+        $(".img-wrapper").hide()
         $(".canvas-wrapper").show()
 
-        $("#canvas")[0].width = 810
-        $("#canvas")[0].height = 400
+        $("#canvas")[0].width = 400
+        $("#canvas")[0].height = 200
 
         # initial speed
         game.dx = 4
@@ -197,8 +189,7 @@ $(() ->
           # paddle collision
           game.dy = -game.dy
         else
-          if game.state == "running"
-            game.state = "hidden"
+          game.dy = -game.dy
 
       game.x += game.dx
       game.y += game.dy
@@ -207,17 +198,18 @@ $(() ->
       when "running"
         setTimeout(game_loop, 10)
       when "hidden"
-        $("pre.reg-banner").show()
+        $(".img-wrapper").show()
         $(".canvas-wrapper").hide()
+
         
     return
 
   cfg_defaults = {
     # cfg have vars that remain the same
     # through a single game
-    paddle_height: 10
-    paddle_width: 75
-    font_size: 16
+    paddle_height: 4 
+    paddle_width: 30 
+    font_size: 8
     font_name: "'Courier New', Monospace"
     figlet_font: "doh"
   }
@@ -226,8 +218,8 @@ $(() ->
     # text to display
     str: "jarv",
     # initial speed
-    dx: 4
-    dy: 8
+    dx: 2
+    dy: 4
     # initial position
     x: 150
     y: 150
@@ -250,7 +242,7 @@ $(() ->
     # depending on the window size
     line_breaks: []
 
-    ball_radius: 20
+    ball_radius: 4
 
     debug: false
 

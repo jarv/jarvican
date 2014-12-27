@@ -8,7 +8,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="/theme/css/{{ CSS_FILE }}" type="text/css" />
     <link rel="stylesheet" href="/theme/css/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="/theme/css/font-awesome.css" type="text/css" />
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     {% if FEED_RSS %}
     <link href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
     {% endif %}
@@ -28,17 +28,12 @@
 
   <body>
     <header class="banner">
-      <div class="canvas-wrapper"><canvas id="canvas"></canvas></div>
-      <pre class="banner reg-banner">
-{{ ASCII_BANNER|default("<strong><span style='color: red'>You must set ASCII_BANNER in pelicanconf.py</span></strong>") }}
-</pre>
-      <pre class="banner mobile-banner">
-{{ ASCII_BANNER_MOBILE|default(ASCII_BANNER) }}
-      </pre>
+      <div class="img-wrapper"><img src="/profile.jpg" alt="profile.pic"/></div>
       {% include 'social_navigation.html' %}
+      <div class="canvas-wrapper"><canvas id="canvas"></canvas></div>
       <div class="navigation">
         {% for title, link in MENUITEMS %}
-        <a href="{{ link }}">[ {{ title }} ]</a>
+        <a href="{{ link }}">{{ title }}</a>
         {% endfor %}
       </div><!-- /#menu -->
 

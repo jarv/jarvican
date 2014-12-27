@@ -8,38 +8,40 @@ $yellow: #FDD56C
 $light-blue: #81C6DD
 $dark-blue: #27709b
 $mantis: #90CA77
-$gray: #A9A9A9
+$gray: #ccc
 $shade-gray: #939393
 $light-gray: #f4f4f4
 $teal: #00ab88
 $dark-charcol: #0d1117
 $charcol: #161e27
 $default-box-shadow: 0 0 0 1px #d1d1d1,0 0 4px 1px #ccc
+$width: 70%
 
 h1, h2, h3, h4, h5, h6
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif
   line-height: 1.25
   margin: 0
   text-rendering: optimizeLegibility
+  color: $dark-red
 
 h1
-  font-size: 2.25em
+  font-size: 1.8em
 
 h2
-  font-size: 2em
+  font-size: 1.5em
 
 h3
-  font-size: 1.5em
+  font-size: 1em
 
 h4
-  font-size: 1.5em
+  font-size: 1em
 
 h5
-  font-size: 1.5em
+  font-size: 1em
 
 h2.archive-entry-title
   a
-    font-size: 2em
+    font-size: 1.5em
 body
   -webkit-font-smoothing: antialiased
   background-color: white
@@ -73,19 +75,14 @@ body
   header.banner
     position: relative
     margin: 0px auto
-
-    @media all and (min-device-width: 900px)
-      pre.mobile-banner
-        display: none
-      width: 810px
-
-    @media all and (max-device-width: 900px)
-      pre.reg-banner
-        display: none
-      div.canvas-wrapper
-        display: none
-      width: 100%
-
+    width: $width
+    text-align: center
+    padding: 10px 0px 10px 0px
+    img
+      box-sizing: border-box
+      width: 150px
+      border: 8px inset $dark-red
+      border-radius: 75px
 
     div.canvas-wrapper
       padding-top: 15px
@@ -95,84 +92,51 @@ body
         z-index: 300
         margin: 0
         padding: 0
-    pre.banner      
-      line-height: 16px
-      font-size: 16px
-      font-family: 'Courier New' monospace
-      color: $shade-gray
-      z-index: -300
-    pre.reg-banner
-      padding-top: 20px
-      padding-left: 50px
-      margin-bottom: 50px
-    pre.mobile-banner
-      margin: 0px auto
-      width: 500px
-      z-index: -300
-
-
 
     // ** start social
     div.social-navigation
-      @media all and (min-device-width: 900px)
 
-        display: inline
-        position: absolute
-        right: 25px 
-        top: 0px
-        ol
-          display: inline-block
-        a
-          font-size: 4em
-      @media all and (max-device-width: 900px)
-        background-color: darken($light-gray, 5%)
-        display: block
-        ol
-          display: block
-        a
-          font-size: 6em
-
-      a
-        padding: 0px
       padding-top: 0
       text-align: center
-
-      li
+      ul
+        -webkit-margin-before: 0px
+        -webkit-margin-after: 0px
+        -webkit-margin-start: 0px
+        -webkit-margin-end: 0px
+        -webkit-padding-start: 0px
         display: inline
-        padding: 0
+        a
+          font-size: 2em
+        li
+          display: inline-block
 
 
     // ** start nav links 
     div.navigation
 
-      @media all and (min-device-width: 900px)
-        position: absolute
-        display: inline-block
-        ol
-          display: inline
-        text-align: right
-        right: 120px
-        top: 320px
-        a
-          font-size: 2em
-      @media all and (max-device-width: 900px)
-        display: block
-        ol
-          display: block
-        width: 100%
-        padding: 10px
-        text-align: center
-        a
-          font-size: 3em
+      display: inline-block
+      ol
+        display: inline
+      text-align: right
+      right: 120px
+      top: 320px
+      a:hover
+        background-color: $dark-blue
+        color: white
       a
+        padding: 5px
+        border-radius: 2px
+        text-decoration: none
+        font-size: 1em
         font-family: $helvetica
         color: $dark-blue
-      a:hover      
-        color: darken($dark-blue, 20)
+        display: inline-block
+        border: 1px solid $gray
   // ******************************** END HEADER
 
   div.content
-    margin: 20px
+    width: $width
+    margin: 0px auto
   // ************* Code highlights
   div.highlight
     padding: 15px
@@ -187,12 +151,12 @@ body
     margin-bottom: 10px
 
     div.entry-summary
-      font-size: 1.5em
+      font-size: 1.2em
 
     // timestamp for article
     footer.post-info abbr
       padding-bottom: 10px
-      font-size: 1.5em
+      font-size: 1em
       color: #555
       font-style: italic
 
@@ -200,10 +164,12 @@ body
 
   // ************* single article view
   section#content
-    padding: 30px
+
+    padding: 20px
     box-shadow: $default-box-shadow
-    font-size: 2em
     background-color: white
+    margin-bottom: 10px
+    font-size: 1.2em
 
     div.entry-content
       font-size: .8em
@@ -211,7 +177,7 @@ body
     // timestamp for article
     footer.post-info abbr
       padding-bottom: 10px
-      font-size: .8em
+      font-size: 1em
       color: #555
       font-style: italic
 
@@ -220,13 +186,13 @@ body
   div.page-wrapper, div.archives-wrapper
     padding: 30px
     box-shadow: $default-box-shadow
-    font-size: 1.5em
+    font-size: 1.2em
     background-color: white
 
   div.archives-wrapper
     table.archives
       font-family: $helvetica
-      font-size: 1em
+      font-size: .8em
       width: 100%
       td
         padding: 5px 
@@ -241,7 +207,7 @@ body
 
   // ************* Footer
   footer#page-footer
-    font-size: 1.5em
+    font-size: .8em
     text-align: center
     width: 100% 
     margin-top: 20px

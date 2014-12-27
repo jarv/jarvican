@@ -2,25 +2,26 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   line-height: 1.25;
   margin: 0;
-  text-rendering: optimizeLegibility; }
+  text-rendering: optimizeLegibility;
+  color: #77141c; }
 
 h1 {
-  font-size: 2.25em; }
+  font-size: 1.8em; }
 
 h2 {
-  font-size: 2em; }
+  font-size: 1.5em; }
 
 h3 {
-  font-size: 1.5em; }
+  font-size: 1em; }
 
 h4 {
-  font-size: 1.5em; }
+  font-size: 1em; }
 
 h5 {
-  font-size: 1.5em; }
+  font-size: 1em; }
 
 h2.archive-entry-title a {
-  font-size: 2em; }
+  font-size: 1.5em; }
 
 body {
   -webkit-font-smoothing: antialiased;
@@ -51,19 +52,15 @@ body {
   background-color: #f4f4f4; }
   body header.banner {
     position: relative;
-    margin: 0px auto; }
-    @media all and (min-device-width: 900px) {
-      body header.banner {
-        width: 810px; }
-        body header.banner pre.mobile-banner {
-          display: none; } }
-    @media all and (max-device-width: 900px) {
-      body header.banner {
-        width: 100%; }
-        body header.banner pre.reg-banner {
-          display: none; }
-        body header.banner div.canvas-wrapper {
-          display: none; } }
+    margin: 0px auto;
+    width: 70%;
+    text-align: center;
+    padding: 10px 0px 10px 0px; }
+    body header.banner img {
+      box-sizing: border-box;
+      width: 150px;
+      border: 8px inset #77141c;
+      border-radius: 75px; }
     body header.banner div.canvas-wrapper {
       padding-top: 15px;
       display: none; }
@@ -72,110 +69,79 @@ body {
         z-index: 300;
         margin: 0;
         padding: 0; }
-    body header.banner pre.banner {
-      line-height: 16px;
-      font-size: 16px;
-      font-family: "Courier New" monospace;
-      color: #939393;
-      z-index: -300; }
-    body header.banner pre.reg-banner {
-      padding-top: 20px;
-      padding-left: 50px;
-      margin-bottom: 50px; }
-    body header.banner pre.mobile-banner {
-      margin: 0px auto;
-      width: 500px;
-      z-index: -300; }
     body header.banner div.social-navigation {
       padding-top: 0;
       text-align: center; }
-      @media all and (min-device-width: 900px) {
-        body header.banner div.social-navigation {
-          display: inline;
-          position: absolute;
-          right: 25px;
-          top: 0px; }
-          body header.banner div.social-navigation ol {
-            display: inline-block; }
-          body header.banner div.social-navigation a {
-            font-size: 4em; } }
-      @media all and (max-device-width: 900px) {
-        body header.banner div.social-navigation {
-          background-color: #e7e7e7;
-          display: block; }
-          body header.banner div.social-navigation ol {
-            display: block; }
-          body header.banner div.social-navigation a {
-            font-size: 6em; } }
-      body header.banner div.social-navigation a {
-        padding: 0px; }
-      body header.banner div.social-navigation li {
-        display: inline;
-        padding: 0; }
-    @media all and (min-device-width: 900px) {
-      body header.banner div.navigation {
-        position: absolute;
+      body header.banner div.social-navigation ul {
+        -webkit-margin-before: 0px;
+        -webkit-margin-after: 0px;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+        -webkit-padding-start: 0px;
+        display: inline; }
+        body header.banner div.social-navigation ul a {
+          font-size: 2em; }
+        body header.banner div.social-navigation ul li {
+          display: inline-block; }
+    body header.banner div.navigation {
+      display: inline-block;
+      text-align: right;
+      right: 120px;
+      top: 320px; }
+      body header.banner div.navigation ol {
+        display: inline; }
+      body header.banner div.navigation a:hover {
+        background-color: #27709b;
+        color: white; }
+      body header.banner div.navigation a {
+        padding: 5px;
+        border-radius: 2px;
+        text-decoration: none;
+        font-size: 1em;
+        font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+        color: #27709b;
         display: inline-block;
-        text-align: right;
-        right: 120px;
-        top: 320px; }
-        body header.banner div.navigation ol {
-          display: inline; }
-        body header.banner div.navigation a {
-          font-size: 2em; } }
-    @media all and (max-device-width: 900px) {
-      body header.banner div.navigation {
-        display: block;
-        width: 100%;
-        padding: 10px;
-        text-align: center; }
-        body header.banner div.navigation ol {
-          display: block; }
-        body header.banner div.navigation a {
-          font-size: 3em; } }
-    body header.banner div.navigation a {
-      font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-      color: #27709b; }
-    body header.banner div.navigation a:hover {
-      color: #12354a; }
+        border: 1px solid #ccc; }
   body div.content {
-    margin: 20px; }
+    width: 70%;
+    margin: 0px auto; }
   body div.highlight {
     padding: 15px;
     background-color: #f4f4f4;
     font-size: 0.8em; }
   body article.archive {
     padding: 20px;
-    box-shadow: 0 0 0 1px #d1d1d1, 0 0 4px 1px #cccccc;
+    box-shadow: 0 0 0 1px #d1d1d1, 0 0 4px 1px #ccc;
     background-color: white;
     margin-bottom: 10px; }
     body article.archive div.entry-summary {
-      font-size: 1.5em; }
+      font-size: 1.2em; }
     body article.archive footer.post-info abbr {
       padding-bottom: 10px;
-      font-size: 1.5em;
-      color: #555555;
+      font-size: 1em;
+      color: #555;
       font-style: italic; }
   body section#content {
-    padding: 30px;
-    box-shadow: 0 0 0 1px #d1d1d1, 0 0 4px 1px #cccccc;
-    font-size: 2em;
-    background-color: white; }
+    padding: 20px;
+    box-shadow: 0 0 0 1px #d1d1d1, 0 0 4px 1px #ccc;
+    background-color: white;
+    margin-bottom: 10px;
+    font-size: 1.2em; }
     body section#content div.entry-content {
       font-size: 0.8em; }
     body section#content footer.post-info abbr {
       padding-bottom: 10px;
-      font-size: 0.8em;
-      color: #555555;
+      font-size: 1em;
+      color: #555;
       font-style: italic; }
   body div.page-wrapper, body div.archives-wrapper {
     padding: 30px;
-    box-shadow: 0 0 0 1px #d1d1d1, 0 0 4px 1px #cccccc;
-    font-size: 1.5em;
+    box-shadow: 0 0 0 1px #d1d1d1, 0 0 4px 1px #ccc;
+    font-size: 1.2em;
     background-color: white; }
   body div.archives-wrapper table.archives {
     font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-    font-size: 1em;
+    font-size: 0.8em;
     width: 100%; }
     body div.archives-wrapper table.archives td {
       padding: 5px; }
@@ -187,8 +153,10 @@ body {
     body div.archives-wrapper table.archives td.odd {
       background-color: #e7e7e7; }
   body footer#page-footer {
-    font-size: 1.5em;
+    font-size: 0.8em;
     text-align: center;
     width: 100%;
     margin-top: 20px;
     margin-bottom: 20px; }
+
+/*# sourceMappingURL=main.css.map */

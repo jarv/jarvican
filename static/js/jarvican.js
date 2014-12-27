@@ -9,13 +9,13 @@
           game.state = "hidden";
       }
     });
-    $("pre.reg-banner").click(function(e) {
+    $(".img-wrapper").click(function(e) {
       switch (game.state) {
         case "hidden":
-          $("pre.reg-banner").hide();
+          $(".img-wrapper").hide();
           $(".canvas-wrapper").show();
-          $("#canvas")[0].width = 810;
-          $("#canvas")[0].height = 400;
+          $("#canvas")[0].width = 400;
+          $("#canvas")[0].height = 200;
           game.dx = 4;
           game.dy = 8;
           game.x = 150;
@@ -156,9 +156,7 @@
           if (game.x + game.ball_radius > game.paddle_x && game.x - game.ball_radius < (game.paddle_x + cfg.paddle_width)) {
             game.dy = -game.dy;
           } else {
-            if (game.state === "running") {
-              game.state = "hidden";
-            }
+            game.dy = -game.dy;
           }
         }
         game.x += game.dx;
@@ -169,21 +167,21 @@
           setTimeout(game_loop, 10);
           break;
         case "hidden":
-          $("pre.reg-banner").show();
+          $(".img-wrapper").show();
           $(".canvas-wrapper").hide();
       }
     };
     cfg_defaults = {
-      paddle_height: 10,
-      paddle_width: 75,
-      font_size: 16,
+      paddle_height: 4,
+      paddle_width: 30,
+      font_size: 8,
       font_name: "'Courier New', Monospace",
       figlet_font: "doh"
     };
     game_defaults = {
       str: "jarv",
-      dx: 4,
-      dy: 8,
+      dx: 2,
+      dy: 4,
       x: 150,
       y: 150,
       right_down: false,
@@ -194,7 +192,7 @@
       word_boundaries: [],
       space_width: 0,
       line_breaks: [],
-      ball_radius: 20,
+      ball_radius: 4,
       debug: false,
       width: 0,
       height: 0,
