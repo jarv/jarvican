@@ -3,7 +3,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.25;
   margin: 0;
   text-rendering: optimizeLegibility;
-  color: #77141c; }
+  color: #4d6774; }
 
 h1 {
   font-size: 1.8em; }
@@ -21,24 +21,23 @@ h5 {
   font-size: 1em; }
 
 h2.archive-entry-title a {
-  font-size: 1.5em; }
+  font-size: 1.2em; }
 
 body {
   -webkit-font-smoothing: antialiased;
-  background-color: white;
   color: #333333;
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-size: 1em; }
 
 h2 {
-  color: #77141c; }
+  color: #4d6774; }
 
 a {
-  color: #27709b;
+  color: #774d55;
   text-decoration: none; }
 
 a:hover {
-  color: #1d5372; }
+  color: #4d6774; }
 
 ol {
   margin: 0px;
@@ -49,17 +48,22 @@ ol {
     list-style-type: disc; }
 
 body {
-  background-color: #f4f4f4; }
+  background-color: #f4f9fb; }
   body header.banner {
     position: relative;
     margin: 0px auto;
-    width: 70%;
     text-align: center;
     padding: 10px 0px 10px 0px; }
+    @media all and (min-device-width: 900px) {
+      body header.banner {
+        width: 65%; } }
+    @media all and (max-device-width: 900px) {
+      body header.banner {
+        width: 100%; } }
     body header.banner img {
       box-sizing: border-box;
       width: 150px;
-      border: 8px inset #77141c;
+      border: 8px inset #4d6774;
       border-radius: 75px; }
     body header.banner div.canvas-wrapper {
       padding-top: 15px;
@@ -79,8 +83,12 @@ body {
         -webkit-margin-end: 0px;
         -webkit-padding-start: 0px;
         display: inline; }
-        body header.banner div.social-navigation ul a {
-          font-size: 2em; }
+        @media all and (min-device-width: 900px) {
+          body header.banner div.social-navigation ul a {
+            font-size: 2em; } }
+        @media all and (max-device-width: 900px) {
+          body header.banner div.social-navigation ul a {
+            font-size: 4em; } }
         body header.banner div.social-navigation ul li {
           display: inline-block; }
     body header.banner div.navigation {
@@ -91,27 +99,37 @@ body {
       body header.banner div.navigation ol {
         display: inline; }
       body header.banner div.navigation a:hover {
-        background-color: #27709b;
+        background-color: #4d6774;
         color: white; }
       body header.banner div.navigation a {
-        padding: 5px;
+        padding: 5px 10px 5px 10px;
         border-radius: 2px;
         text-decoration: none;
-        font-size: 1em;
         font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-        color: #27709b;
+        color: #774d55;
         display: inline-block;
-        border: 1px solid #ccc; }
+        border: 1px solid #cccccc; }
+        @media all and (min-device-width: 900px) {
+          body header.banner div.navigation a {
+            font-size: 2em; } }
+        @media all and (max-device-width: 900px) {
+          body header.banner div.navigation a {
+            font-size: 4em; } }
   body div.content {
-    width: 70%;
     margin: 0px auto; }
+    @media all and (min-device-width: 900px) {
+      body div.content {
+        width: 65%; } }
+    @media all and (max-device-width: 900px) {
+      body div.content {
+        width: 100%; } }
   body div.highlight {
     padding: 15px;
-    background-color: #f4f4f4;
+    background-color: #f4f9fb;
     font-size: 0.8em; }
   body article.archive {
     padding: 20px;
-    box-shadow: 0 0 0 1px #d1d1d1, 0 0 4px 1px #ccc;
+    box-shadow: 0 0 0 1px #d1d1d1, 0 0 4px 1px #cccccc;
     background-color: white;
     margin-bottom: 10px; }
     body article.archive div.entry-summary {
@@ -119,24 +137,23 @@ body {
     body article.archive footer.post-info abbr {
       padding-bottom: 10px;
       font-size: 1em;
-      color: #555;
+      color: #555555;
       font-style: italic; }
   body section#content {
     padding: 20px;
-    box-shadow: 0 0 0 1px #d1d1d1, 0 0 4px 1px #ccc;
+    box-shadow: 0 0 0 1px #d1d1d1, 0 0 4px 1px #cccccc;
     background-color: white;
-    margin-bottom: 10px;
-    font-size: 1.2em; }
+    margin-bottom: 10px; }
     body section#content div.entry-content {
-      font-size: 0.8em; }
+      font-size: 1em; }
     body section#content footer.post-info abbr {
       padding-bottom: 10px;
       font-size: 1em;
-      color: #555;
+      color: #555555;
       font-style: italic; }
   body div.page-wrapper, body div.archives-wrapper {
     padding: 30px;
-    box-shadow: 0 0 0 1px #d1d1d1, 0 0 4px 1px #ccc;
+    box-shadow: 0 0 0 1px #d1d1d1, 0 0 4px 1px #cccccc;
     font-size: 1.2em;
     background-color: white; }
   body div.archives-wrapper table.archives {
@@ -146,17 +163,15 @@ body {
     body div.archives-wrapper table.archives td {
       padding: 5px; }
     body div.archives-wrapper table.archives td.even {
-      background-color: #f4f4f4; }
+      background-color: #f4f9fb; }
     body div.archives-wrapper table.archives td.date {
       font-family: Fixed, monospace;
       width: 100px; }
     body div.archives-wrapper table.archives td.odd {
-      background-color: #e7e7e7; }
+      background-color: #e0eef5; }
   body footer#page-footer {
     font-size: 0.8em;
     text-align: center;
     width: 100%;
     margin-top: 20px;
     margin-bottom: 20px; }
-
-/*# sourceMappingURL=main.css.map */
