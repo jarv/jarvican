@@ -3,7 +3,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.25;
   margin: 0;
   text-rendering: optimizeLegibility;
-  color: #4d6774; }
+  color: #4D6774; }
 
 h1 {
   font-size: 1.8em; }
@@ -30,14 +30,14 @@ body {
   font-size: 1em; }
 
 h2 {
-  color: #4d6774; }
+  color: #4D6774; }
 
 a {
-  color: #774d55;
+  color: #774D55;
   text-decoration: none; }
 
 a:hover {
-  color: #4d6774; }
+  color: #4D6774; }
 
 ol {
   margin: 0px;
@@ -63,7 +63,7 @@ body {
     body header.banner img {
       box-sizing: border-box;
       width: 150px;
-      border: 8px inset #4d6774;
+      border: 8px inset #4D6774;
       border-radius: 75px; }
     body header.banner div.canvas-wrapper {
       padding-top: 15px;
@@ -99,16 +99,16 @@ body {
       body header.banner div.navigation ol {
         display: inline; }
       body header.banner div.navigation a:hover {
-        background-color: #4d6774;
+        background-color: #4D6774;
         color: white; }
       body header.banner div.navigation a {
         padding: 5px 10px 5px 10px;
         border-radius: 2px;
         text-decoration: none;
         font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-        color: #774d55;
+        color: #774D55;
         display: inline-block;
-        border: 1px solid #cccccc; }
+        border: 1px solid #ccc; }
         @media all and (min-device-width: 900px) {
           body header.banner div.navigation a {
             font-size: 2em; } }
@@ -129,7 +129,7 @@ body {
     font-size: 0.8em; }
   body article.archive {
     padding: 20px;
-    box-shadow: 0 0 0 1px #d1d1d1, 0 0 4px 1px #cccccc;
+    box-shadow: 0 0 0 1px #d1d1d1, 0 0 4px 1px #ccc;
     background-color: white;
     margin-bottom: 10px; }
     body article.archive div.entry-summary {
@@ -137,11 +137,11 @@ body {
     body article.archive footer.post-info abbr {
       padding-bottom: 10px;
       font-size: 1em;
-      color: #555555;
+      color: #555;
       font-style: italic; }
   body section#content {
     padding: 20px;
-    box-shadow: 0 0 0 1px #d1d1d1, 0 0 4px 1px #cccccc;
+    box-shadow: 0 0 0 1px #d1d1d1, 0 0 4px 1px #ccc;
     background-color: white;
     margin-bottom: 10px; }
     body section#content div.entry-content {
@@ -149,11 +149,11 @@ body {
     body section#content footer.post-info abbr {
       padding-bottom: 10px;
       font-size: 1em;
-      color: #555555;
+      color: #555;
       font-style: italic; }
   body div.page-wrapper, body div.archives-wrapper {
     padding: 30px;
-    box-shadow: 0 0 0 1px #d1d1d1, 0 0 4px 1px #cccccc;
+    box-shadow: 0 0 0 1px #d1d1d1, 0 0 4px 1px #ccc;
     font-size: 1.2em;
     background-color: white; }
   body div.archives-wrapper table.archives {
@@ -175,3 +175,5 @@ body {
     width: 100%;
     margin-top: 20px;
     margin-bottom: 20px; }
+
+/*# sourceMappingURL=main.css.map */
