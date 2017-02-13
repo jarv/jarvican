@@ -7,6 +7,7 @@
     <!-- <meta name="viewport" content="width=device-width, target-densitydpi=device-dpi, initial-scale=0, maximum-scale=1, user-scalable=yes"> -->
     <meta name="viewport" content="width=device-width">
     <!-- CSS -->
+    <link rel="stylesheet" href="/theme/css/normalize.min.css">
     <link rel="stylesheet" href="/theme/css/{{ CSS_FILE }}" type="text/css" />
     <link rel="stylesheet" href="/theme/css/pygments.css" type="text/css" />
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
@@ -29,6 +30,7 @@
   </head>
 
   <body>
+    <div class="wrapper">
     <header class="banner">
       <div class="img-wrapper"><img src="/profile.jpg" alt="profile.pic"/></div>
       {% include 'social_navigation.html' %}
@@ -56,7 +58,7 @@
         powered by <a href="http://getpelican.com/">pelican</a> with the <a href="https://github.com/jarv/jarvican">jarvican</a> theme.
       </div>
     </footer><!-- /#contentinfo -->
-
+    </div>
     <script src="/theme/js/vendor/modernizr-2.6.2.min.js"></script>
     <script src="/theme/js/vendor/jquery-1.11.0.min.js"></script>
     <script src="/theme/js/jarvican.js"></script>

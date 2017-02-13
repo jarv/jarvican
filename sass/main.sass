@@ -1,5 +1,7 @@
 @import 'bourbon/bourbon'
 
+$medium: 760px
+$linkblue: #0066cc
 // http://paletton.com/#uid=72G0N0k8itH4JVv4QLebfn2bsg3
 // headers and picture outline
 $headers: #4D6774
@@ -19,6 +21,9 @@ $nav-hover: white
 $article-bg: lighten(#E0F9D4, 50)
 $width: 65%
 $width-mobile: 95%
+
+@import "neat/neat"
+@import "base/base"
 
 h1, h2, h3, h4, h5, h6
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif
@@ -69,6 +74,9 @@ ol
     list-style-type: none
   ul, li
     list-style-type: disc
+
+.wrapper
+  @include outer-container
 
 body
   background-color: $light-gray
@@ -147,57 +155,39 @@ body
         border: 1px solid $gray
   // ******************************** END HEADER
 
-  div.content
 
-    @media all and (min-device-width: 900px)
-      width: $width
-    @media all and (max-device-width: 900px)
-      width: $width-mobile
-    margin: 0px auto
-  // ************* Code highlights
-  div.highlight
-    padding: 15px
-    background-color: $light-gray
-    font-size: .8em
+  div.entry-content-summary
+    pre
+      max-height: 20em
+  
 
-  // ************* summary article view
-  article.archive
-    padding: 20px
-    box-shadow: $default-box-shadow
-    background-color: $article-bg
-    margin-bottom: 10px
-
-    div.entry-summary
-      font-size: 1.2em
-
-    // timestamp for article
-    footer.post-info abbr
-      padding-bottom: 10px
+  div.entry-content 
+    box-shadow: $default-box-shadow 
+    color: #292f33
+    background-color: white
+    font-family: $helvetica
+    padding: 1em
+    border-radius: 10px
+    @include media(max-width $medium) 
+      border-radius: 0px
+      padding: .5em
+    
+    a:link, a:visited 
+      color: $linkblue
+    
+    a:hover 
+      color: darken($linkblue, 20%)
+    
+    pre 
+      padding: .5em
+      margin: auto
+      width: 90%
+      @include media(max-width $medium) 
+        width: 100%
+      
       font-size: 1em
-      color: #555
-      font-style: italic
-
-
-
-  // ************* single article view
-  section#content
-    padding: 20px
-    box-shadow: $default-box-shadow
-    background-color: $article-bg
-    margin-bottom: 10px
-    // font-size: 1.2em
-
-    div.entry-content
-      font-size: 1em
-
-    // timestamp for article
-    footer.post-info abbr
-      padding-bottom: 10px
-      font-size: 1em
-      color: #555
-      font-style: italic
-
-
+    
+  
   // about and archives div wrapper
   div.page-wrapper, div.archives-wrapper
     padding: 30px
