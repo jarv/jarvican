@@ -4,6 +4,9 @@ $medium: 760px
 $linkblue: #0066cc
 // http://paletton.com/#uid=72G0N0k8itH4JVv4QLebfn2bsg3
 // headers and picture outline
+$dkblue: #41A8DF
+$dkerblue: #298EC3
+$lightyellow: #fffb67
 $headers: #4D6774
 // links
 $links: #774D55
@@ -12,7 +15,7 @@ $link-hover: #4D6774
 // outlines around navigation buttons
 $gray: #ccc 
 // matte background
-$light-gray: lighten(#CDE4EF, 10)
+$light-gray: lighten(#CDE4EF, 30%)
 // all box shadows
 $default-box-shadow: 0 0 0 1px #d1d1d1,0 0 4px 1px #ccc
 // text color for hover over nav buttons
@@ -79,7 +82,7 @@ ol
   @include outer-container
 
 body
-  background-color: $light-gray
+  background-color: white
 
   // **************************   START HEADER
   header.banner
@@ -164,6 +167,7 @@ body
   div.entry-content 
     box-shadow: $default-box-shadow 
     color: #292f33
+    margin-bottom: 2em
     background-color: white
     font-family: $helvetica
     padding: 1em

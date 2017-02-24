@@ -294,7 +294,7 @@ ol {
     clear: both; }
 
 body {
-  background-color: #DDD; }
+  background-color: white; }
   body header.banner {
     position: relative;
     margin: 0px auto;
@@ -366,6 +366,7 @@ body {
   body div.entry-content {
     box-shadow: 0 0 0 1px #d1d1d1, 0 0 4px 1px #ccc;
     color: #292f33;
+    margin-bottom: 2em;
     background-color: white;
     font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
     padding: 1em;
